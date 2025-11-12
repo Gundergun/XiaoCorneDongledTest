@@ -1,14 +1,22 @@
-if SHIELD_CORNE_XIAO_V2_LEFT
+if SHIELD_CORNE_XIAO_V2_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Corne"
+    default "Corne Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
 
-if SHIELD_CORNE_XIAO_V2_LEFT || SHIELD_CORNE_XIAO_V2_RIGHT
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif
+if SHIELD_CORNE_XIAO_V2_DONGLE || if SHIELD_CORNE_XIAO_V2_LEFT || SHIELD_CORNE_XIAO_V2_RIGHT
 
 config ZMK_SPLIT
     default y
