@@ -1,5 +1,9 @@
 #include "corne_xiao_v1.dtsi"
 
+&uicr {
+        nfct-pins-as-gpios;
+};
+
 &default_transform {
     col-offset = <6>;
 };
